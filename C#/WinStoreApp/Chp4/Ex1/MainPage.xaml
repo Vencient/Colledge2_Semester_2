@@ -11,7 +11,7 @@
         <TextBlock Text="Notes" FontSize="48" HorizontalAlignment="Center"/>
         <Grid HorizontalAlignment="Center" VerticalAlignment="Center" Background="WhiteSmoke" Height="600" Width="900" >
             <TextBlock Name="txtNoNotes" Text="No note exits" FontSize="48" VerticalAlignment="Center" HorizontalAlignment="Center" Foreground="Black" />
-            <ListBox  Name="lbNoteName"  Width="900" Height="600" ScrollViewer.VerticalScrollMode="Auto" ScrollViewer.VerticalScrollBarVisibility="Auto" SelectionChanged="lbNoteName_SelectionChanged">
+            <ListBox x:ConnectionId='2'  Name="lbNoteName"  Width="900" Height="600" ScrollViewer.VerticalScrollMode="Auto" ScrollViewer.VerticalScrollBarVisibility="Auto"                                               >
                 <ListBox.ItemTemplate>
                     <DataTemplate>
                         <TextBlock Text="{Binding Title}" FontSize="24" />
@@ -20,7 +20,8 @@
             </ListBox>
         </Grid>
         <AppBar Background="CadetBlue" VerticalAlignment="Bottom" >
-            <Button Content="Add" FontSize="36" FontStyle="Italic" Click="Button_Click" BorderThickness="0"/>
+            <Button x:ConnectionId='1' Content="Add" FontSize="36" FontStyle="Italic"                      BorderThickness="0"/>
         </AppBar>
     </Grid>
 </Page>
+
